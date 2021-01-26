@@ -1,0 +1,228 @@
+
+body{
+    width:100vw;
+    height:100vh;
+    
+}
+
+.container *{
+    margin:2px;
+}
+
+.container{
+    width:100%;
+    height:100%;
+    display:flex;
+    font-family:'Lato',sans-serif;
+}
+.center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+h1{
+    position:absolute;
+}
+
+.block1{
+    color:white;
+    background-color: #244F75;
+    animation-name:block1;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    width:20%;
+        
+}     
+.block2{
+    position:relative;
+    color:white;
+    background-color: #60BFBF;
+    width:20%;
+    animation-name:block2;
+    animation-duration:0.5s;
+    animation-delay:0.5s;
+    visibility:hidden;
+    animation-fill-mode:forwards;
+    /*Con overflow hidden escondemos el trozo del div deformado que sobresale de su div contenedor*/
+    overflow:hidden;
+
+}
+.block3{
+    color:white;
+    background-color: #8C4B7E;
+    width:20%;
+    animation-name:block3;
+    animation-duration:0.5s;
+    animation-delay:1s;
+    visibility:hidden;
+    animation-fill-mode:forwards;
+    overflow:hidden;
+
+    
+}
+.block4{
+    position:relative;
+    color:white;
+    background-color: #F8BB44;
+    width:20%;
+    animation-name:block2;
+    animation-duration:0.5s;
+    animation-delay:1.5s;
+    visibility:hidden;
+    animation-fill-mode:forwards;
+    overflow:hidden;
+
+    
+}
+.block5{
+    position:relative;
+    color:white;
+    background-color: #F24B4B;
+    width:20%;
+    animation-name:block5;
+    animation-duration:0.5s;
+    animation-delay:2s;
+    visibility:hidden;
+    animation-fill-mode:forwards;
+    overflow:hidden;
+
+}
+
+.stripe1{
+        
+    width:100%;
+    height:100%;
+    transform: skewX(30deg);
+    background-color:white;
+    opacity:0.1;
+    
+} 
+.stripe2{
+    
+    width:100%;
+    height:100%;
+    transform: skewX(30deg);
+    background-color:white;
+    opacity:0.1;
+}
+.stripe3{
+    
+    width:100%;
+    height:100%;
+    transform: skewX(30deg);
+    background-color:white;
+    opacity:0.1;
+    
+} 
+.stripe4{
+    
+    width:100%;
+    height:100%;
+    transform: skewX(30deg);
+    background-color:white;
+    opacity:0.1;
+    
+} 
+.stripe5{
+    
+    width:100%;
+    height:100%;
+    transform: skewX(30deg);
+    background-color:white;
+    opacity:0.1;
+    
+} 
+
+/*Efectos hover de stripes*/
+.block1:hover .stripe1{
+    cursor:pointer;
+    animation-name:hover;
+    animation-duration:0.1s;
+    animation-fill-mode: forwards;
+    
+}
+.block2:hover .stripe2{
+    cursor:pointer;
+    animation-name:hover;
+    animation-duration:0.1s;
+    animation-fill-mode: forwards;
+    
+}
+.block3:hover .stripe3{
+    cursor:pointer;
+    animation-name:hover;
+    animation-duration:0.1s;
+    animation-fill-mode: forwards;
+    
+}
+.block4:hover .stripe4{
+    cursor:pointer;
+    animation-name:hover;
+    animation-duration:0.1s;
+    animation-fill-mode: forwards;
+    
+}
+.block5:hover .stripe5{
+    cursor:pointer;
+    animation-name:hover;
+    animation-duration:0.1s;
+    animation-fill-mode: forwards;
+    
+}
+
+/*Animación*/
+
+@keyframes block2{
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        }
+        100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+
+        }
+}
+@keyframes block3{
+    0% {
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        }
+        100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+
+        }
+}
+@keyframes block5{
+    0% {
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+        }
+        100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+
+        }
+
+}
+@keyframes hover {
+    0%{}
+    100%{transform: scale(2)}
+}
+
+@keyframes block1 {
+    0% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+    }
+   }
